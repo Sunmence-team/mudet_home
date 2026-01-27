@@ -43,8 +43,8 @@ const LoginPage = () => {
 
           const redirectURL =
             response.data.role === 'admin'
-              ? `https://app.mudetrealsolution.com/#/auth-redirect?token=${encodeURIComponent(encrypted)}&role=${role}`
-              : `https://app.mudetrealsolution.com/#/auth-redirect?token=${encodeURIComponent(encrypted)}&role=${role}`;
+              ? `https://app.mudetrealsolution.com/auth-redirect?token=${encodeURIComponent(encrypted)}&role=${role}`
+              : `https://app.mudetrealsolution.com/auth-redirect?token=${encodeURIComponent(encrypted)}&role=${role}`;
           
           toast.success('Login successful');
           setTimeout(() => {
@@ -63,9 +63,10 @@ const LoginPage = () => {
         if (axios.isAxiosError(err) && err.response && err.response.status === 401) {
           toast.error(err.response.data.message || "Validation error. Please check your inputs.");
         } else {
-          toast.error("An unexpected error occurred while logging in. " + err?.response?.data?.message || err?.message || "Please try again later.");
+          toast.error(err?.response?.data?.message || err?.message || "Please try again later.");
           console.error("Error during logging in:", err);
         }
+        setIsSubmitting(false)
       }
     },
   });

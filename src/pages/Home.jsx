@@ -239,7 +239,7 @@ const Home = () => {
     },
   ]
 
-  const finalTestimonials = (loadingTestimonials || !testimonials || testimonials.length < 2) ? fallbackTestimonials : testimonials
+  const finalTestimonials = (loadingTestimonials || !testimonials || testimonials.length < 2) ? fallbackTestimonials : testimonials.reverse()
 
   return (
     <div className="w-full flex flex-col">
@@ -473,7 +473,7 @@ const Home = () => {
                       <p className="text-base md:text-lg font-bold text-black/50 capitalize">{testimonial.title}</p>
                     </div>
                   </div>
-                  <div className="w-[90%] flex items-center gap-2">
+                  <div className="w-[90%] flex items-center gap-4">
                     <div className={`w-6 md:w-2 min-h-18 max-h-[calc(100%+5px)] ${index % 2 === 0 ? 'bg-pryClr' : 'bg-secClr'} rounded-lg`}></div>
                     <p className="w-[calc(100%-24px)] text-sm text-start md:text-base">{testimonial.testimonial}</p>
                   </div>

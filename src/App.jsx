@@ -1,13 +1,14 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Layout from './component/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Products from './pages/Products';
-import Plan from './pages/Plan';
-import Contact from './pages/Contact';
-import Login from './pages/Login';
-import { Toaster } from 'sonner';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./component/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Plan from "./pages/Plan";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import { Toaster } from "sonner";
+import SingleProduct from "./pages/SingleProduct";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Products />} />
+          <Route path="/products/:slug" element={<SingleProduct />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

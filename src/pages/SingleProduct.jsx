@@ -23,25 +23,25 @@ const SingleProduct = () => {
         hero: {
           title: "Cinnamon \nHerbal Extract",
           desc: `Discover the power of nature’s healing touch. Cinnamon Herbal
-Extract is a 100% natural supplement designed to restore balance,
-boost immunity, and promote complete body wellness. Backed by
-centuries of herbal tradition and modern wellness needs, it’s more
-than just a supplement, it’s your partner in healthy living.`,
+            Extract is a 100% natural supplement designed to restore balance,
+            boost immunity, and promote complete body wellness. Backed by
+            centuries of herbal tradition and modern wellness needs, it’s more
+            than just a supplement, it’s your partner in healthy living.`,
           image: assets.pic13,
           mobileBgImage: assets.pic13,
         },
         about: {
           title: "About the product",
           text: `Cinnamon herbal extract is derived from the bark of the cinnamon
-tree and contains powerful bioactive compounds with medicinal
-properties. It is used both as a health supplement and in
-traditional herbal medicine for its numerous therapeutic benefits.`,
+            tree and contains powerful bioactive compounds with medicinal
+            properties. It is used both as a health supplement and in
+            traditional herbal medicine for its numerous therapeutic benefits.`,
         },
         whoFor: {
           title: "Who Is It For?",
           text: `Cinnamon Herbal Extract is ideal for anyone looking to naturally
-support wellness, improve digestion, balance blood sugar, and boost
-overall vitality.`,
+            support wellness, improve digestion, balance blood sugar, and boost
+            overall vitality.`,
           sideImage: assets.pic14,
           benefits: [
             {
@@ -77,8 +77,8 @@ overall vitality.`,
         whyChoose: {
           title: "Why Choose Cinnamon Herbal Extract?",
           text: `Cinnamon Herbal Extract is ideal for anyone looking to naturally
-support wellness, improve digestion, balance blood sugar, and boost
-overall vitality.`,
+            support wellness, improve digestion, balance blood sugar, and boost
+          overall vitality.`,
           features: [
             {
               id: 1,
@@ -329,39 +329,40 @@ Herbal Extract and enjoy the natural way to lasting wellness.`,
   const { hero, about, whoFor, whyChoose, keyBenefits, ctaBanner } = product;
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-end">
       {/* HERO */}
-      <section className="w-full bg-white flex items-center justify-center h-screen relative overflow-hidden">
-        {/* Background Image with Green Overlay for sm and md Screens */}
+      <section className="w-full min-h-screen bg-white flex items-end justify-center relative overflow-hidden">
+        {/* Mobile Background */}
         <div
           className="lg:hidden absolute inset-0 bg-cover bg-center z-0"
           style={{ backgroundImage: `url(${hero.mobileBgImage})` }}
         >
-          <div className="absolute inset-0 bg-pryClr/75" />
+          <div className="absolute inset-0 bg-pryClr/80" />
         </div>
 
-        <div className="w-[90%] mx-auto h-full flex flex-col md:flex-col lg:grid lg:grid-cols-2 lg:gap-6 items-center justify-center lg:justify-start relative">
-          <div className="w-full md:w-[90%] lg:w-full flex flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-6 z-10 bg-white/10 lg:bg-transparent py-12 lg:p-0 px-4 rounded-t-[200px] lg:rounded-none backdrop-blur-xs lg:backdrop-blur-none border border-white/20 lg:border-none text-white lg:text-black justify-center">
-            <h1 className="font-bold text-3xl md:text-6xl lg:text-6xl leading-10 md:leading-12 lg:leading-16 whitespace-pre-line">
+        <div className="w-[90%] mx-auto h-full flex flex-col lg:grid lg:grid-cols-2  lg:gap-10 items-center justify-center relative z-10">
+          {/* TEXT CONTENT */}
+          <div className="w-full flex flex-col bg-white/20 items-center lg:items-start text-center lg:text-left gap-5 lg:gap-6 backdrop-blur-sm lg:backdrop-blur-none px-6 lg:p-0 py-12 rounded-t-[120px] lg:rounded-none text-white lg:text-black">
+            <h1 className="font-bold text-3xl md:text-5xl lg:text-6xl leading-tight whitespace-pre-line">
               {hero.title}
             </h1>
 
-            <p className="text-sm md:text-xl lg:text-lg leading-7 md:leading-12 lg:leading-8 whitespace-pre-line">
+            <p className="text-sm md:text-lg lg:text-lg leading-relaxed max-w-xl whitespace-pre-line">
               {hero.desc}
             </p>
 
             <div className="w-full flex justify-center lg:justify-start">
               <Link to="/login">
-                <button className="px-12 bg-white lg:bg-pryClr rounded-3xl lg:rounded-full py-2 border-2 border-white lg:border-pryClr text-pryClr lg:text-white font-semibold lg:font-medium hover:bg-white hover:text-pryClr transition-colors duration-200">
+                <button className="px-10 py-3 rounded-full bg-white lg:bg-pryClr text-pryClr lg:text-white font-semibold border-2 border-white lg:border-pryClr hover:bg-transparent hover:text-white lg:hover:text-pryClr transition-all duration-300 shadow-md hover:shadow-lg">
                   Shop With Us
                 </button>
               </Link>
             </div>
           </div>
 
-          {/* Desktop Image */}
-          <div className="hidden lg:flex w-full h-full items-center">
-            <img src={hero.image} alt="Product" className="object-cover" />
+          {/* DESKTOP IMAGE */}
+          <div className="hidden lg:flex w-full h-full items-end justify-center">
+            <img src={hero.image} alt="Product" className="w-ful h-[85%]" />
           </div>
         </div>
       </section>

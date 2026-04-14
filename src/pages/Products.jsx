@@ -28,7 +28,7 @@ const Products = () => {
   return (
     <div className="w-full bg-white flex flex-col items-center">
       {/* Header */}
-      <div className="w-[90%] py-12 md:py-16 text-center">
+      <div className="w-[90%] py-12 mt-10 md:py-16 text-center">
         <p className="text-3xl md:text-5xl font-bold text-black">
           Our Products
         </p>
@@ -39,21 +39,21 @@ const Products = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 gap-8 pb-16">
+      <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 gap-8 pb-18">
         {products.map((p) => (
           <div
             key={p.id}
             className="w-full border border-black/10 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
           >
-            <div className="w-full h-[260px] bg-black/5 overflow-hidden">
+            <div className="w-full h-[260px] bg-black/5 overflow-hidden flex items-end pb-6">
               <img
                 src={p.image}
                 alt={p.name}
-                className="w-full h-full object-contain object-center"
+                className="w-full h-[90%] object-contain"
               />
             </div>
 
-            <div className="p-6 flex flex-col gap-3">
+            <div className="p-6  flex flex-col gap-3">
               <p className="text-xl md:text-2xl font-bold text-black">
                 {p.name}
               </p>

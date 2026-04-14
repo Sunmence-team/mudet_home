@@ -22,7 +22,7 @@ import pic19 from "./pic19.png";
 import pic20 from "./pic20.png";
 import pic21 from "./pic21.png";
 import pic22 from "./pic22.jpg";
-import armor from "./armor.jpeg";
+import armor from "./armor.png";
 
 const assets = {
   armor,

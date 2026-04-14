@@ -136,14 +136,14 @@ const About = () => {
     return (
       <div
         key={index}
-        className={`hidden md:flex ${reverse ? 'flex-row-reverse' : 'flex-row'} gap-3 md:gap-4 lg:gap-6 border border-black/20 shadow-sm p-3 md:p-3 rounded-full h-fit min-h-[120px] sm:min-h-[140px] md:min-h-[15  0px]`}
+        className={`hidden md:flex ${reverse ? 'flex-row-reverse' : 'flex-row'} gap-3 md:gap-4 lg:gap-2 border border-black/20 shadow-sm p-3 md:p-3 rounded-full h-fit min-h-[120px] sm:min-h-[140px] md:min-h-[15  0px]`}
       >
         <div
           className={`flex-[3] w-full ${feature.bgColor} ${reverse ? 'rounded-br-full rounded-tr-full' : 'rounded-bl-full rounded-tl-full'} flex items-center justify-center`}
         >
           {feature.icon}
         </div>
-        <div className={`flex-[7] flex flex-col gap-2 px-8 ${reverse ? 'text-start' : 'text-start'} justify-center`}>
+        <div className={`flex-[9] flex flex-col gap-2 px-8 ${reverse ? 'text-start' : 'text-start'} justify-center`}>
           <p className="text-xs md:text-sm lg:text-base ">{feature.description}</p>
         </div>
       </div>

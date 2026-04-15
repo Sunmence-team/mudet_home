@@ -143,7 +143,7 @@ const About = () => {
         >
           {feature.icon}
         </div>
-        <div className={`flex-[9] flex flex-col gap-2 px-8 ${reverse ? 'text-start' : 'text-start'} justify-center`}>
+        <div className={`flex-[9] flex flex-col gap-2 px-5 ${reverse ? 'text-start' : 'text-start'} justify-center`}>
           <p className="text-xs md:text-sm lg:text-base ">{feature.description}</p>
         </div>
       </div>

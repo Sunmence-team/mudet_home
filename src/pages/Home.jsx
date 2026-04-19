@@ -290,7 +290,7 @@ const Home = () => {
                     </button>
                   </Link>
 
-                  <Link to="/login">
+                  <Link to="https://app.mudetrealsolution.com/login">
                     <button className="w-56 lg:w-48 h-12 bg-transparent border-2 border-white text-white rounded-3xl hover:bg-white hover:text-pryClr transition-colors duration-200">
                       Member Login
                     </button>

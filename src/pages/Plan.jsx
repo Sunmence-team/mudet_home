@@ -162,6 +162,13 @@ const Plan = () => {
                             </div>
                         ))}
                     </div>
+                    <a
+                        href="/MUDET_compesation_plan.pdf"
+                        download="MUDET-COMPENSATION-PLAN.pdf"
+                        className="mt-8 inline-flex items-center justify-center rounded-full bg-pryClr px-6 py-3 text-sm font-semibold text-white transition hover:bg-pryClr/90"
+                    >
+                        Download Compensation Plan PDF
+                    </a>
                 </div>
             </div>
         </div>

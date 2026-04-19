@@ -8,10 +8,8 @@ import { BiSupport } from "react-icons/bi";
 import { MdPeopleAlt } from "react-icons/md";
 import { IoPersonAdd } from "react-icons/io5";
 import { FaMoneyBill1 } from "react-icons/fa6";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { BsArrowDownRight, BsArrowUpRight } from "react-icons/bs";
-import { FaSpinner } from "react-icons/fa";
-import { toast } from "sonner";
+import axios from "axios";
 
 const Home = () => {
   const API_URL = import.meta.env.VITE_API_BASE_URL;
@@ -27,22 +25,16 @@ const Home = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/testimonial/all`, {
-          method: "GET",
+        const response = await axios.get(`${API_URL}/api/testimonial/all`, {
           headers: {
             "Content-Type": "application/json",
           },
         });
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        const fetchedTestimonials = data.data?.data || [];
-        // Sort by created_at (descending) and take the last 4
-        const sortedTestimonials = fetchedTestimonials
-          .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-          .slice(-4)
-          .map((testimonial, index) => ({
+
+        const fetchedTestimonials = response.data.data?.data.splice(0, 4) || [];
+        console.log("fetchedTestimonials", fetchedTestimonials);
+        const newStructuredArray = fetchedTestimonials.map(
+          (testimonial, index) => ({
             name: testimonial.full_name || "N/A",
             title: testimonial.position || "N/A",
             testimonial: testimonial.comment || "No comment provided",
@@ -50,8 +42,9 @@ const Home = () => {
               ? `${STORAGE_BASE_URL}/${testimonial.image}`
               : assets.placeholder,
             barBgColor: index % 2 === 0 ? "bg-pryClr" : "bg-secClr",
-          }));
-        setTestimonials(sortedTestimonials);
+          }),
+        );
+        setTestimonials(newStructuredArray);
       } catch (error) {
         console.error("Error fetching testimonials:", error);
         // toast.error(error.message || "Failed to fetch testimonials.");

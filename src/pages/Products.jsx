@@ -74,6 +74,7 @@ const Products = () => {
       </div>
 
       {/* CTA */}
+      
       <div className="w-[90%] mb-16 rounded-2xl bg-pryClr text-white p-8 md:p-12 text-center">
         <p className="text-2xl md:text-4xl font-bold">
           Ready to start your wellness journey?

@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Plan from "./pages/Plan";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import { Toaster } from "sonner";
 import SingleProduct from "./pages/SingleProduct";
 
@@ -26,7 +25,6 @@ const App = () => {
         </Route>
 
         {/* Route without Layout */}
-        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );

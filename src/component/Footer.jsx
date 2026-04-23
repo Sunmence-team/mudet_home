@@ -7,7 +7,9 @@ import { toast, Toaster } from "sonner";
 
 // Validation schema
 const emailValidationSchema = Yup.object({
-  email: Yup.string().email("Invalid email address").required("Email is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
 });
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
@@ -27,9 +29,34 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <p className="font-bold text-base">Follow Us</p>
               <div className="flex gap-5 md:gap-6">
-                <img src={assets.pic19} className="w-6" alt="Social 1" />
-                <img src={assets.pic20} className="w-6" alt="Social 2" />
-                <img src={assets.pic21} className="w-6" alt="Social 3" />
+                <a
+                  href="https://www.facebook.com/share/18Qpr7ktBB/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.pic19} className="w-6" alt="Facebook" />
+                </a>
+                <a
+                  href="https://www.instagram.com/mudet.ig26?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.pic20} className="w-6" alt="Social 2" />
+                </a>
+                <a
+                  href="tiktok.com/@mudet8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.pic23} className="w-6 rounded-2xl" alt="Social 3" />
+                </a>
+                <a
+                  href="https://wa.me/2348052253543?text=Hello%20Mudet%2C%20I%20would%20love%20help%20with%20__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.pic21} className="w-6" alt="Social 4" />
+                </a>
               </div>
             </div>
           </div>
@@ -37,16 +64,30 @@ const Footer = () => {
           {/* Middle Section */}
           <div className="flex-[5] flex flex-col justify-between gap-8 md:gap-0">
             <div className="grid grid-cols-2 gap-3 md:flex md:gap-3">
-              <Link to="/" className="text-base hover:underline">Home</Link>
-              <Link to="/about" className="text-base hover:underline">About Us</Link>
-              <Link to="/product" className="text-base hover:underline">Products</Link>
-              <Link to="/plan" className="text-base hover:underline">Compensation Plan</Link>
-              <Link to="/contact" className="text-base hover:underline col-span-2">Contact Us</Link>
+              <Link to="/" className="text-base hover:underline">
+                Home
+              </Link>
+              <Link to="/about" className="text-base hover:underline">
+                About Us
+              </Link>
+              <Link to="/product" className="text-base hover:underline">
+                Products
+              </Link>
+              <Link to="/plan" className="text-base hover:underline">
+                Compensation Plan
+              </Link>
+              <Link
+                to="/contact"
+                className="text-base hover:underline col-span-2"
+              >
+                Contact Us
+              </Link>
             </div>
             <div className="flex flex-col gap-3">
               <p className="font-bold text-base">About Us</p>
               <p className="text-sm md:w-[60%]">
-                We exist to bridge the gap between nature and opportunity, offering products that promote better living.
+                We exist to bridge the gap between nature and opportunity,
+                offering products that promote better living.
               </p>
             </div>
           </div>
@@ -95,7 +136,9 @@ const Footer = () => {
                     const data = await response.json();
 
                     if (response.ok) {
-                      toast.success(data.message || "Email submitted successfully!");
+                      toast.success(
+                        data.message || "Email submitted successfully!",
+                      );
                       resetForm();
                     } else {
                       throw new Error(data.message || "Failed to subscribe.");

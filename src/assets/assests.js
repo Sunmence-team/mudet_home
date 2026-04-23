@@ -23,6 +23,8 @@ import pic20 from "./pic20.png";
 import pic21 from "./pic21.png";
 import pic22 from "./pic22.jpg";
 import armor from "./armor.png";
+import pic23 from "./pic23.jpg";
+
 
 const assets = {
   armor,
@@ -50,6 +52,7 @@ const assets = {
   pic20,
   pic21,
   pic22,
+  pic23,
 };
 
 export default assets;

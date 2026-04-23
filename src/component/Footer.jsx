@@ -44,7 +44,7 @@ const Footer = () => {
                   <img src={assets.pic20} className="w-6" alt="Social 2" />
                 </a>
                 <a
-                  href="tiktok.com/@mudet8"
+                  href="https://tiktok.com/@mudet8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

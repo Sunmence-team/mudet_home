@@ -284,7 +284,7 @@ const Home = () => {
                 </p>
                 {/* Buttons */}
                 <div className="w-full flex gap-4 md:gap-6 flex-col md:flex-row items-center justify-center lg:items-start lg:justify-start font-semibold">
-                  <Link to="/login">
+                  <Link to="https://app.mudetrealsolution.com/login">
                     <button className="w-56 lg:w-48 h-12 bg-white border-2 border-white text-pryClr rounded-3xl hover:bg-transparent hover:text-white transition-colors duration-200">
                       Get Started
                     </button>

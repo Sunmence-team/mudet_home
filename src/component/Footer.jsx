@@ -18,12 +18,12 @@ const Footer = () => {
   return (
     <>
       <div className="w-full flex bg-pryClr items-center justify-center text-black py-12 md:py-16 border-t border-white/20">
-        <div className="w-[90%] flex flex-col gap-8 md:flex-row md:h-[25vh] text-white">
+        <div className="w-[90%] flex flex-col gap-8 lg:flex-row md:min-h-[25vh] text-white">
           {/* Left Section */}
-          <div className="flex-[2.5] flex flex-col justify-between gap-6 md:gap-0">
+          <div className="flex-[2.5] flex flex-col gap-6">
             <div>
               <p className="font-bold text-xl md:text-xl lg:text-2xl">
-                Mudet Real <br /> Solution Limited
+                Mudet Real <br className="lg:block hidden" /> Solution Limited
               </p>
             </div>
             <div className="flex flex-col gap-3">
@@ -48,7 +48,11 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={assets.pic23} className="w-6 rounded-2xl" alt="Social 3" />
+                  <img
+                    src={assets.pic23}
+                    className="w-6 rounded-2xl"
+                    alt="Social 3"
+                  />
                 </a>
                 <a
                   href="https://wa.me/2348052253543?text=Hello%20Mudet%2C%20I%20would%20love%20help%20with%20__"
@@ -62,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Middle Section */}
-          <div className="flex-[5] flex flex-col justify-between gap-8 md:gap-0">
+          <div className="flex-[5] flex flex-col gap-8">
             <div className="grid grid-cols-2 gap-3 md:flex md:gap-3">
               <Link to="/" className="text-base hover:underline">
                 Home
@@ -95,7 +99,7 @@ const Footer = () => {
           {/* Right Section */}
           <div className="flex-[2.5] flex flex-col justify-between gap-8 md:gap-8">
             {/* Contact (mobile) */}
-            <div className="md:hidden flex justify-between">
+            <div className="lg:hidden grid grid-cols-2 gap-y-4">
               <div className="flex flex-col">
                 <span className="font-semibold">Contact:</span>
                 <p className="text-base">+234 813 521 345</p>
@@ -104,10 +108,17 @@ const Footer = () => {
                 <span className="font-semibold">Email:</span>
                 <p className="text-base">Mudet@gmail.com</p>
               </div>
+              <div className="flex flex-col col-span-2">
+                <p className="font-bold text-sm">Address</p>
+                <p className="text-sm">
+                  NO 1, Onimalu Palace Street, Adegbayi Area, Egbeda Local
+                  Government, Ibadan, Oyo State
+                </p>
+              </div>
             </div>
 
             {/* Contact (desktop) */}
-            <div className="hidden md:flex flex-col gap-8">
+            <div className="hidden lg:flex flex-col gap-4">
               <div className="flex flex-col">
                 <p className="font-bold text-sm">Contact</p>
                 <p className="text-sm">+234 813 521 345</p>
@@ -115,6 +126,13 @@ const Footer = () => {
               <div className="flex flex-col">
                 <p className="font-bold text-sm">Email</p>
                 <p className="text-sm">Mudet@gmail.com</p>
+              </div>
+              <div className="flex flex-col">
+                <p className="font-bold text-sm">Address</p>
+                <p className="text-sm">
+                  NO 1, Onimalu Palace Street, Adegbayi Area, Egbeda Local
+                  Government, Ibadan, Oyo State
+                </p>
               </div>
             </div>
 

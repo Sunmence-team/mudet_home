@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="text-white/80 text-sm md:text-base">
-            Effective Date: [Insert Date]
+            Effective Date: 21st April 2026
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
 
               <div className="space-y-4 text-gray-700 leading-8">
                 <p>
-                  Welcome to MUDET ("Company," "we," "our," or "us").
+                  Welcome to MUDET Company.
                 </p>
 
                 <p>
@@ -336,10 +336,10 @@ const PrivacyPolicy = () => {
                 </h2>
 
                 <div className="space-y-3 text-white/90">
-                  <p>Email: [Insert Email Address]</p>
-                  <p>Phone: [Insert Phone Number]</p>
-                  <p>Address: [Insert Business Address]</p>
-                  <p>Website: [Insert Website URL]</p>
+                  <p>Email: Mudet@gmail.com</p>
+                  <p>Phone: +234 813 521 345</p>
+                  <p>Address: NO 1, Onimalu Palace Street, Adegbayi Area, Egbeda Local Government, Ibadan, Oyo State</p>
+                  {/* <p>Website: [Insert Website URL]</p> */}
                 </div>
               </div>
 

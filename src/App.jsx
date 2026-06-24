@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import { Toaster } from "sonner";
 import SingleProduct from "./pages/SingleProduct";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/products/:slug" element={<SingleProduct />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>
         <Route path="*" element={<NotFound />} />
 

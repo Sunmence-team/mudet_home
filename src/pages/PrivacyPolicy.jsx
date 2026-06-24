@@ -327,7 +327,7 @@ const PrivacyPolicy = () => {
                   <p>Email: Mudet@gmail.com</p>
                   <p>Phone: +234 813 521 345</p>
                   <p>Address: NO 1, Onimalu Palace Street, Adegbayi Area, Egbeda Local Government, Ibadan, Oyo State</p>
-                  {/* <p>Website: [Insert Website URL]</p> */}
+                  <p>Website: https://sunmencesolutions.com.ng</p>
                 </div>
               </div>
 

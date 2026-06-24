@@ -7,7 +7,6 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="w-full flex flex-col bg-[#F8FAFC]">
-      {/* Hero Section */}
       <div className="w-full bg-pryClr py-20 md:py-28 flex justify-center">
         <div className="w-[90%] flex flex-col items-center text-center text-white gap-6">
           <div className="bg-white/20 px-5 py-2 rounded-full">
@@ -27,19 +26,16 @@ const PrivacyPolicy = () => {
           </p>
 
           <p className="text-white/80 text-sm md:text-base">
-            Effective Date: [Insert Date]
+            Effective Date: 21st April 2026
           </p>
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="w-full flex justify-center py-12 md:py-20">
         <div className="w-[90%] lg:w-[80%] bg-white rounded-3xl shadow-lg overflow-hidden">
-          {/* Top Accent */}
           <div className="h-4 bg-pryClr"></div>
 
           <div className="p-6 md:p-12 flex flex-col gap-12">
-            {/* Introduction */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 1. Introduction
@@ -48,6 +44,7 @@ const PrivacyPolicy = () => {
               <div className="space-y-4 text-gray-700 leading-8">
                 <p>
                   Welcome to MUDET ("Company," "we," "our," or "us").
+
                 </p>
 
                 <p>
@@ -73,7 +70,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Information We Collect */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-8">
                 2. Information We Collect
@@ -143,7 +139,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* How We Use Information */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 3. How We Use Your Information
@@ -164,7 +159,6 @@ const PrivacyPolicy = () => {
               </ul>
             </section>
 
-            {/* Referral Activities */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 4. Referral and Network Marketing Activities
@@ -188,7 +182,6 @@ const PrivacyPolicy = () => {
               </ul>
             </section>
 
-            {/* Sharing Information */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-6">
                 5. Sharing of Information
@@ -236,7 +229,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Data Security */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 7. Data Security
@@ -254,7 +246,6 @@ const PrivacyPolicy = () => {
               </p>
             </section>
 
-            {/* Data Retention */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 8. Data Retention
@@ -294,7 +285,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Children */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 10. Children's Privacy
@@ -311,7 +301,6 @@ const PrivacyPolicy = () => {
               </p>
             </section>
 
-            {/* Changes */}
             <section className="border-b border-gray-100 pb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-pryClr mb-4">
                 13. Changes to This Privacy Policy
@@ -328,7 +317,6 @@ const PrivacyPolicy = () => {
               </p>
             </section>
 
-            {/* Contact */}
             <section>
               <div className="bg-pryClr rounded-3xl p-8 md:p-10 text-white">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -336,10 +324,10 @@ const PrivacyPolicy = () => {
                 </h2>
 
                 <div className="space-y-3 text-white/90">
-                  <p>Email: [Insert Email Address]</p>
-                  <p>Phone: [Insert Phone Number]</p>
-                  <p>Address: [Insert Business Address]</p>
-                  <p>Website: [Insert Website URL]</p>
+                  <p>Email: Mudet@gmail.com</p>
+                  <p>Phone: +234 813 521 345</p>
+                  <p>Address: NO 1, Onimalu Palace Street, Adegbayi Area, Egbeda Local Government, Ibadan, Oyo State</p>
+                  <p>Website: https://mudetrealsolution.com</p>
                 </div>
               </div>
 
